@@ -24,7 +24,9 @@ export const Colors = {
 }
 
 export enum FontSize {
+  textSmall = '12px',
   text = '18px',
+  titleSmall = '32px',
   title = '48px'
 }
 

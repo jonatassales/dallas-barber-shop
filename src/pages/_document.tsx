@@ -38,8 +38,8 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-          {/* Change this when you go live */}
-          <meta name="googlebot" content="noindex, noimageindex, nofollow, nosnippet" />
+          <meta name="robots" content="index,follow" />
+          <meta name="googlebot" content="index,follow" />
 
           <link rel="icon" href="/favicon.ico" />
           <style type="text/css" dangerouslySetInnerHTML={{ __html: mediaStyles }} />

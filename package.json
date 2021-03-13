@@ -1,15 +1,16 @@
 {
-  "name": "klivo-web-starter",
+  "name": "dallas-barber-shop",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prod": "next build && next start",
     "analyze": "ANALYZE=true yarn build",
     "storybook": "start-storybook -s ./public -p 9001",
     "lint": "eslint --ext .ts,.tsx ./src",
-    "prettier:check": "yarn prettier --check ./src ./stories",
+    "prettier:check": "yarn prettier --check ./src",
     "validate": "npm-run-all prettier:check lint build",
     "validate:ci": "npm-run-all --parallel prettier:check lint build"
   },
