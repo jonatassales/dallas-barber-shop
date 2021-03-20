@@ -1,11 +1,13 @@
 import React from 'react'
 import Head from 'next/head'
 
-import { Config as WhatsAppConfig } from '@/infra/whatsapp/Config'
+import WhatsAppConfig from '@/infra/whatsapp/config'
+import InstagramConfig from '@/infra/instagram/config'
 import Anchor from '@/components/Anchor'
 import WhatsappButton from '@/patterns/WhatsAppButton'
+import InstagramButtom from '@/patterns/InstagramButtom'
 
-import { Container } from '@/styled/home'
+import { Container, SocialButtons } from '@/styled/home'
 
 export default function Home(): React.ReactElement {
   return (
@@ -17,9 +19,14 @@ export default function Home(): React.ReactElement {
       </Head>
       <h1>Dallas Barber Club</h1>
       <p>Cabelo e Barba</p>
-      <Anchor href={WhatsAppConfig.Src} target="_blank" rel="noreferrer">
-        <WhatsappButton>Agendar por Whatsapp!</WhatsappButton>
-      </Anchor>
+      <SocialButtons>
+        <Anchor href={WhatsAppConfig.src} rel="noreferrer">
+          <WhatsappButton>Agendar por Whatsapp!</WhatsappButton>
+        </Anchor>
+        <Anchor href={InstagramConfig.src} rel="noreferrer">
+          <InstagramButtom>Agendar por Instagram!</InstagramButtom>
+        </Anchor>
+      </SocialButtons>
     </Container>
   )
 }
